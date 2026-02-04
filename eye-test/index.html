@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Eye Test Online</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+  <div>VISION</div>
+  <div class="header-buttons">
+    <div class="home-btn" onclick="goHome()">Home</div>
+  </div>
+</header>
+
+<section class="hero" id="mainPage">
+  <h1>Eye Test Online</h1>
+  <p>Free near-vision screening using a Tumbling E chart.</p>
+  <div class="actions">
+    <button onclick="startVisionTest()">Start Vision Test Online</button>
+    <button onclick="startAstigmatism()">Check for signs of astigmatism</button>
+  </div>
+</section>
+
+<section id="qaSection">
+  <h2>Q AND A</h2>
+
+  <div class="qa-item">
+    <p class="q">What are Tumbling E eye chart tests?</p>
+    <p class="a">
+      A tumbling E chart uses the letter E rotated in different directions.
+      It is used to test visual acuity for people who cannot read letters.
+    </p>
+  </div>
+
+  <div class="qa-item">
+    <p class="q">What does 2/10 or 2/2, 2/1.5 mean?</p>
+    <p class="a">
+      This is a reduced near-vision version of a standard chart.
+      2/10 means very poor eyesight, 2/2 good eyesight, 2/1.5 perfect eyesight.
+    </p>
+  </div>
+
+  <div class="qa-item">
+    <p class="q">What is myopia?</p>
+    <p class="a">
+      Nearsightedness (myopia) means close objects are clear,
+      but distant objects appear blurry.
+    </p>
+  </div>
+
+  <div class="qa-item">
+    <p class="q">What is hyperopia?</p>
+    <p class="a">
+      Farsightedness (hyperopia) means distant objects are clearer
+      than close objects.
+    </p>
+  </div>
+
+  <div class="qa-item">
+    <p class="q">What is astigmatism?</p>
+    <p class="a">
+      Astigmatism occurs when the eye has an irregular shape,
+      causing blurred vision at all distances.
+    </p>
+  </div>
+</section>
+
+<div id="testWrapper">
+  <div class="chart-frame" id="app">
+
+    <div class="page active" id="page1">
+      <p><b>Tumbling E Vision Test</b><br>Prepare for the test<br>Take off your glasses</p>
+      <button class="button" onclick="nextPage(2)">Next</button>
+    </div>
+
+    <div class="page" id="page2">
+      <p>Increase screen brightness<br>Press F11</p>
+      <button class="button" onclick="nextPage(3)">Next</button>
+    </div>
+
+    <div class="page" id="page3">
+      <p>Keep device at arm’s length</p>
+      <button class="button" onclick="nextPage(4)">Next</button>
+    </div>
+
+    <div class="page" id="page4">
+      <div class="face">
+        <div class="eye"><div class="pupil"></div><div class="eyelid"></div></div>
+        <div class="eye right"><div class="pupil"></div><div class="eyelid"></div></div>
+      </div>
+      <p>Cover your <b>left eye</b></p>
+      <button class="button" onclick="startTest('left')">Start Test</button>
+    </div>
+
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
